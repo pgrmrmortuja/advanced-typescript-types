@@ -1,3 +1,3 @@
-console.log("Advanced Typescript Types");
+import { greeting } from "./v1-module.js";
 
-let array: number[] = [1,2,3];
+greeting();
