@@ -45,3 +45,19 @@ const car: Car = {
     brand: "Toyota",
 }
 
+//04
+//Interface Duplicate Name Only
+interface IEmployee {
+    name: string
+}
+
+interface IEmployee {
+    id: number
+}
+
+const employee: IEmployee = {
+    name: "abc",
+    id: 123
+}
+
+

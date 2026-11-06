@@ -11,4 +11,8 @@ const car = {
     model: "Corolla",
     brand: "Toyota",
 };
+const employee = {
+    name: "abc",
+    id: 123
+};
 export {};
