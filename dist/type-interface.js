@@ -16,3 +16,11 @@ const employee = {
     id: 123
 };
 export {};
+//05
+//! Not Possible Duplicate Type Alias
+// type TEmployee = {
+//     name: string
+// }
+// type TEmployee = {
+//     id: number
+// }
