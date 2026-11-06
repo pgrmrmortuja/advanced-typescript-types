@@ -30,3 +30,18 @@ const cat: Cat = {
     breed: "Persian",
 }
 
+//03 type from type
+//intersection
+type Vehicle = {
+    brand: string
+}
+
+type Car = Vehicle &{
+    model: string
+}
+
+const car: Car = {
+    model: "Corolla",
+    brand: "Toyota",
+}
+
