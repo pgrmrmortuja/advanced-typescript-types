@@ -2,7 +2,7 @@
 type Identity = string | number;
 const id: Identity = 1234;
 
-//literal type
+//literal type //unit type
 type Status = "pending";
 const status: Status = "pending";
 
