@@ -76,3 +76,5 @@ function process(data) {
     }
 }
 export {};
+// Narrowing - typeof, truthiness, equality ===, in operator, instanceof, discriminated union, custom type
+//1048
