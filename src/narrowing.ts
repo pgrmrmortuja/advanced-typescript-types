@@ -102,3 +102,5 @@ function process(data: unknown){
 }
 
 // Narrowing - typeof, truthiness, equality ===, in operator, instanceof, discriminated union, custom type
+
+//1048
