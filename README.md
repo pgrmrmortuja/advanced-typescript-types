@@ -191,27 +191,6 @@ async function fetchUserData(): Promise<User> {
 }
 ```
 
----
-
-## ⚙️ How to Run Locally
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
-   ```
-
-2. **Install TypeScript globally (if not installed):**
-   ```bash
-   npm install -g typescript
-   ```
-
-3. **Run TypeScript files using `ts-node` (Optional):**
-   ```bash
-   npm install -g ts-node
-   ts-node narrowing.ts
-   ```
-
 ## 💡 About This Project
 
 This repository is built as a hands-on learning log for mastering **TypeScript**. It emphasizes clear code patterns, step-by-step concepts, and well-explained comments for future revisions.
