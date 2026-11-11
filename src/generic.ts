@@ -1,53 +1,49 @@
-//Generic
-//01
-//If not use Generic
-//! Separate Function for number 
+// Generics: Write reusable code that works safely with any data type
+
+// 01. Why we need Generics (Problems without Generics)
+
+// Problem A: Writing duplicate functions for each type
 function getNumber(value: number): number {
     return value;
 }
 
-//! Separate Function string 
 function getString(value: string): string {
     return value;
 }
 
-//!Problem using "any"
+// Problem B: Using 'any' loses type safety (TS won't catch mistakes)
 function getValue(value: any): any {
     return value;
 }
 
 const result = getValue("Hello World");
-result.toFixed() //! using for only number, not string
+//! result.toFixed(); // Runtime Error! No TS warning because 'result' is 'any'
 
-//02
-//Generic
+// 02. Generic Function (<T> acts as a placeholder for the type)
 function printData<T>(arg: T): T {
     return arg;
 }
 
-const strOutput = printData<string>("Reyad");
-const numberOutput = printData<number>(123);
+const strOutput = printData<string>("Reyad"); // T becomes string
+const numberOutput = printData<number>(123);   // T becomes number
 
-//03
-//! Bad Practice
-// function showLength<T>(item: T): T{
-//     console.log(item.length) ;
+// 03. Generic Constraints (Using "extends" to limit allowed types)
+//! Bad Practice: TS doesn't know if 'T' has a '.length' property
+// function showLength<T>(item: T) {
+//     console.log(item.length); // Error
 // }
 
-
-// Using "extends"
+// Good Practice: Only allow types that have a 'length' property (like string or array)
 function showLength<T extends { length: number }>(item: T) {
     console.log(item.length);
 }
 
-showLength("Hello");
-showLength([1, 2, 3]);
+showLength("Hello");   // Valid (Output: 5)
+showLength([1, 2, 3]); // Valid (Output: 3)
 
-//04
-//Generic with Interface
-
+// 04. Generic with Interface (Reusable object structure)
 interface Box<T> {
-    content: T
+    content: T;
 }
 
 interface UserProfile {
@@ -60,4 +56,4 @@ const userBox: Box<UserProfile> = {
         username: "abc",
         isLoggedIn: true
     }
-}
+};
